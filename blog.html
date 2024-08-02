@@ -21,6 +21,40 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+       .blog-entry {
+            position: relative;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .text-content {
+            display: -webkit-box;
+            -webkit-line-clamp: 5; /* Mostrar solo las primeras 5 líneas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .text-content.expanded {
+            -webkit-line-clamp: unset; /* Mostrar todo el texto */
+            max-height: 1000px; /* Ajusta esto según la cantidad de contenido */
+        }
+
+        .btn-expand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+  </style>
   </head>
   <body>
     
@@ -49,88 +83,102 @@
     </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Blog</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+          	<h2 class="subheading">Nuestro Blog</h2>
+          	<h1>Porque también nos gusta opinar
+						</h1>
+            <!-- <h1 class="mb-4">Attorneys Fighting For Your Freedom</h1> -->
+            <p class="mb-4">Nos complace darle la bienvenida a Migralaw, desde este espacio encontrará soluciones legales y personalizadas para empezar una nueva vida o un nuevo negocio en España. 
+				Navegue por la web, analice y consulte los servicios que ofrecemos para todo el mundo con total confianza y dedicación.
+				</p>
+            <p><a href="#" class="btn btn-primary mr-md-4 py-2 px-4">Consultanos <span class="ion-ios-arrow-forward"></span></a></p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="ftco-section bg-light">
       <div class="container">
         <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
+          <div class="blog-entry justify-content-end" id="blogEntry">
+            <div class="blog-entry justify-content-end">
+                <div class="text px-4 py-4">
+                    <h3 class="heading mb-0"><a href="#">Crisis Migratoria en Islas Canarias</a></h3>
+                </div>
+                <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                </a>
+                <div class="text p-4 float-right d-block">
+                    <div class="topper d-flex align-items-center">
+                        <div class="one py-2 pl-3 pr-1 align-self-stretch">
+                            <span class="day">30</span>
+                        </div>
+                        <div class="two pl-0 pr-3 py-2 align-self-stretch">
+                            <span class="yr">2023</span>
+                            <span class="mos">Octubre</span>
+                        </div>
+                    </div>
+                    <div class="text-content" id="textContent">
+                        <p>Salto la noticia hace poco de que en un período de tan solo nueve días, más de 4.500 personas fueron rescatadas al llegar en pateras a las costas canarias, marcando una de las oleadas migratorias más intensas en años. Muchas otras no lograron completar su viaje. Esta crisis desbordó el sistema local, lo que llevó al Gobierno, tras la presión del Ejecutivo insular, a decidir trasladar a algunos de los recién llegados a distintos puntos de la Península, a pesar de la oposición de algunos ayuntamientos y regiones.Salto la noticia hace poco de que en un período de tan solo nueve días, más de 4.500 personas fueron rescatadas al llegar en pateras a las costas canarias, marcando una de las oleadas migratorias más intensas en años. Muchas otras no lograron completar su viaje. Esta crisis desbordó el sistema local, lo que llevó al Gobierno, tras la presión del Ejecutivo insular, a decidir trasladar a algunos de los recién llegados a distintos puntos de la Península, a pesar de la oposición de algunos ayuntamientos y regiones.Salto la noticia hace poco de que en un período de tan solo nueve días, más de 4.500 personas fueron rescatadas al llegar en pateras a las costas canarias, marcando una de las oleadas migratorias más intensas en años. Muchas otras no lograron completar su viaje. Esta crisis desbordó el sistema local, lo que llevó al Gobierno, tras la presión del Ejecutivo insular, a decidir trasladar a algunos de los recién llegados a distintos puntos de la Península, a pesar de la oposición de algunos ayuntamientos y regiones.Salto la noticia hace poco de que en un período de tan solo nueve días, más de 4.500 personas fueron rescatadas al llegar en pateras a las costas canarias, marcando una de las oleadas migratorias más intensas en años. Muchas otras no lograron completar su viaje. Esta crisis desbordó el sistema local, lo que llevó al Gobierno, tras la presión del Ejecutivo insular, a decidir trasladar a algunos de los recién llegados a distintos puntos de la Península, a pesar de la oposición de algunos ayuntamientos y regiones.</p>
+                    </div>
+                    <button class="btn-expand btn btn-primary" id="expandButton">Leer más</button>
+                </div>
+            </div>
+        </div>
+          <div class="blog-entry justify-content-end" id="blogEntry">
+            <div class="text px-4 py-4">
+              <h3 class="heading mb-0"><a href="#">La Corte Internacional de Justicia Ordena a Israel Prevenir el Genocidio y Facilitar Asistencia Humanitaria en Gaza</a></h3>
+            </div>
+            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+            </a>
+            <div class="text p-4 float-right d-block">
+              <div class="topper d-flex align-items-center">
+                <div class="one py-2 pl-3 pr-1 align-self-stretch">
+                  <span class="day">29</span>
+                </div>
+                <div class="two pl-0 pr-3 py-2 align-self-stretch">
+                  <span class="yr">2024</span>
+                  <span class="mos">Enero</span>
+                </div>
               </div>
+              <div class="text-content" id="textContent2">
+              <p>La Corte Internacional de Justicia (CIJ) ha ordenado a Israel que tome medidas para prevenir y sancionar cualquier incitación al genocidio contra los civiles palestinos en Gaza y que facilite la entrada de asistencia humanitaria en la región. Aunque las decisiones de la CIJ son legalmente vinculantes, el tribunal tiene recursos limitados para hacerlas cumplir. Además, se le ha solicitado a Israel que preserve pruebas y que presente un informe sobre las acciones tomadas en respuesta a estas órdenes en un plazo de un mes. La situación en Gaza, con más de 26,000 muertos reportados, ha sido descrita como una "tragedia humana" por la jueza Joan E. Donoghue.
+              </p>
+              </div>
+            
+        <button class="btn-expand btn btn-primary" id="expandButton2">Leer más</button>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
+          <div class="blog-entry justify-content-end">
+          	<div class="blog-entry justify-content-end" id="blogEntry">
           		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
-          		</div>
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4 float-right d-block">
-              	<div class="topper d-flex align-items-center">
-              		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
-              		</div>
-              		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
-              		</div>
-              	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-          		<div class="text px-4 py-4">
-          			<h3 class="heading mb-0"><a href="#">All you want to know about industrial laws</a></h3>
+          			<h3 class="heading mb-0"><a href="#">"España, Irlanda y Noruega Reconocen el Estado Palestino, Sumándose a la Mayoría Internacional"</a></h3>
           		</div>
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
               </a>
               <div class="text p-4 float-right d-block">
               	<div class="topper d-flex align-items-center">
               		<div class="one py-2 pl-3 pr-1 align-self-stretch">
-              			<span class="day">18</span>
+              			<span class="day">22</span>
               		</div>
               		<div class="two pl-0 pr-3 py-2 align-self-stretch">
-              			<span class="yr">2019</span>
-              			<span class="mos">October</span>
+              			<span class="yr">2024</span>
+              			<span class="mos">Mayo</span>
               		</div>
               	</div>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                <div class="text-content" id="textContent3">
+                <p>España, Irlanda y Noruega reconocerán este martes al Estado palestino, un gesto simbólico que las alinea con la mayoría de los países miembros de la ONU, que ya han hecho este reconocimiento. Dentro de la Unión Europea, varios estados como Bulgaria, Chipre, Eslovaquia, Hungría, Malta, Polonia, República Checa, Rumanía y Suecia ya han adoptado esta postura. En el Caribe, Trinidad y Tobago, Bahamas, Jamaica y Barbados también han reconocido a Palestina como un estado independiente.
+                  El reconocimiento de Palestina comenzó tras su declaración de independencia en 1988 por la Organización para la Liberación de Palestina. A lo largo de 2024, la mayoría de la comunidad internacional ha respaldado este reconocimiento, aunque algunos aliados de Estados Unidos e Israel aún se resisten.</p>
+                </div>
+					
+          <button class="btn-expand btn btn-primary" id="expandButton3">Leer más</button>
               </div>
             </div>
           </div>
-
+         <!-- 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
           		<div class="text px-4 py-4">
@@ -213,6 +261,7 @@
             </div>
           </div>
         </div>
+        -->
       </div>
     </section>
 
@@ -330,6 +379,23 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script>
+    document.getElementById('expandButton').addEventListener('click', function() {
+        var textContent = document.getElementById('textContent');
+        textContent.classList.toggle('expanded');
+    });
+</script>
+<script>
+  document.getElementById('expandButton2').addEventListener('click', function() {
+      var textContent = document.getElementById('textContent2');
+      textContent.classList.toggle('expanded');
+  });
+</script>
+<script>
+  document.getElementById('expandButton3').addEventListener('click', function() {
+      var textContent = document.getElementById('textContent3');
+      textContent.classList.toggle('expanded');
+  });
+</script>
   </body>
 </html>
